@@ -30,4 +30,4 @@ def file_metadata(instance, position):
     if position not in range(len(instance.queue)):
         print('Posição inválida', file=sys.stderr)
     else:
-        print(instance.queue[position], file=sys.stdout)
+        print(instance.search(position), file=sys.stdout)
