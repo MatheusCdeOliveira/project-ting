@@ -6,12 +6,12 @@ def test_basic_priority_queueing():
     priority = PriorityQueue()
 
     mocks = [
-        {"qtd_linhas": 1},
-        {"qtd_linhas": 2},
-        {"qtd_linhas": 6},
-        {"qtd_linhas": 3},
-    ]
-
+              {"qtd_linhas": 1},
+              {"qtd_linhas": 2},
+              {"qtd_linhas": 6},
+              {"qtd_linhas": 3}
+            ]
+    
     with pytest.raises(IndexError, match="Índice Inválido ou Inexistente"):
         priority.search(100)
 
@@ -34,3 +34,5 @@ def test_basic_priority_queueing():
 
     priority.dequeue()
     assert priority.search(0) == mocks[2]
+
+
